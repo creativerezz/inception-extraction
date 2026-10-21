@@ -113,7 +113,10 @@ export default function App() {
     }
   }
 
-  const stop = () => abort.current?.abort()
+  const stop = () => {
+    if (abort.current) track('chat_stopped', { provider: model?.provider ?? 'unknown', model: model?.id ?? 'unknown' })
+    abort.current?.abort()
+  }
   const goHome = () => {
     stop()
     setActiveId(null)
@@ -165,10 +168,17 @@ export default function App() {
         <main className="flex flex-1 flex-col items-center justify-center overflow-y-auto px-3 sm:px-4">
           <div className="w-full max-w-[680px] py-6">
             <Hero />
-            <DiffusionToggle on={diffusion} onChange={setDiffusion} />
+            <DiffusionToggle
+              on={diffusion}
+              onChange={(on) => {
+                track('diffusion_toggled', { enabled: on })
+                setDiffusion(on)
+              }}
+            />
             {composerEl}
             <SuggestedPrompts
               onPick={(p) => {
+                track('prompt_picked', { id: p.id })
                 composer.current?.setValue(p.text)
                 composer.current?.focus()
               }}
