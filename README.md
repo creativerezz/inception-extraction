@@ -29,3 +29,27 @@ Use `PROMPTS.json` when populating suggestion cards. Its titles and descriptions
 Source color values and responsive declarations are exact. Numeric component heights and positions are observations of the stated viewport and empty-composer state. Light colors are source-declared; detailed visual/geometry inspection was in dark mode. The package distinguishes source values, observations, and suggested implementation aliases.
 
 Primary sources: [page](https://chat.inceptionlabs.ai/) and [deployed stylesheet](https://chat.inceptionlabs.ai/_next/static/immutable/chunks/0cgm-x4dz_snt.css).
+
+## App
+
+A working Vite + React 19 + TypeScript + Tailwind v4 chat UI rebuilt from the captured tokens lives in [`app/`](app/). A small Bun server keeps provider keys out of the browser; on Vercel the same handlers run as functions from `app/api/`.
+
+```sh
+cd app
+bun install
+cp .env.example .env.local   # add an OpenRouter key (free models need no credits)
+bun run dev     # API on :3003 + Vite on http://localhost:3002
+bun run build   # tsc + vite build -> dist/
+bun run start   # production: API + built app on :3003
+bun run lint    # oxlint
+```
+
+See [`app/README.md`](app/README.md) for the provider setup (local Ollama + OpenRouter free models), the Thinking menu, and where each piece lives. Product analytics run through `@vercel/analytics` (`chat_sent`, `prompt_picked`, `diffusion_toggled`, `chat_stopped`).
+
+## Deploy
+
+Set the project root to `app/` on Vercel. The build emits `dist/` and `api/*.ts` become serverless functions. Add `OPENROUTER_API_KEY` as an environment variable in the Vercel dashboard.
+
+## License
+
+[MIT](LICENSE). The design and prompt data are observational captures of a third-party site, recorded for study and reuse; verify provenance fields before depending on any value. Trademarks, logos, and font binaries belong to their respective owners and are not bundled.
