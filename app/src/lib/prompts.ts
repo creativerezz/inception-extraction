@@ -1,8 +1,10 @@
-import data from '../../../PROMPTS.json'
+import data from '../data/prompts.json'
 
 export type Prompt = { id: string; title: string; description: string; text: string }
 
-export const prompts: Prompt[] = data.prompts.map((p) => ({
+type RawPrompt = { id: string; title: string; description: string }
+
+export const prompts: Prompt[] = data.prompts.map((p: RawPrompt) => ({
   id: p.id,
   title: p.title,
   description: p.description,

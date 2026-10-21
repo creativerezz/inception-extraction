@@ -1,0 +1,256 @@
+/*
+ * Inception Chat — reusable design token extraction
+ * Source: https://chat.inceptionlabs.ai/
+ * Stylesheet: https://chat.inceptionlabs.ai/_next/static/immutable/chunks/0cgm-x4dz_snt.css
+ * Exact source declarations and computed observations: design-tokens.json
+ *
+ * EXACT SOURCE TOKENS: 44 light semantic variables and 44 dark variables.
+ * Literal names/values are retained. Generic framework colors and syntax
+ * highlighting selector colors are not the semantic application palette.
+ *
+ * APPLICATION GUIDANCE
+ * Add class="dark" to <html> for the dark palette; remove it for light.
+ * The visible app shell and header must use background: var(--surface).
+ * In dark mode --surface is #111; body uses --background, which is #0a0a0a.
+ * Keep those two roles distinct when reproducing the page.
+ * Composer/suggestion surfaces use --surface-alt with --edge and --fg.
+ * --cta-bg/--cta-fg and --btn-bg/--btn-fg are separate component roles.
+ *
+ * This file declares tokens only. It does not impose body/layout styles,
+ * load fonts, or activate animations. Original keyframes and exact measured
+ * desktop values are recorded in design-tokens.json.
+ */
+/* 1. Original light semantic palette — all 44 variables. */
+:root {
+  --background: #fff;
+  --foreground: #111;
+  --surface: #fff;
+  --surface-alt: #f5f5f5;
+  --surface-code: #f8f8f8;
+  --surface-hover: #ebebeb;
+  --surface-elevated: #fafafa;
+  --surface-citation: #f0f0f0;
+  --surface-tooltip: #fff;
+  --surface-modal: #fff;
+  --edge: #d4d4d4;
+  --edge-soft: #e5e5e5;
+  --edge-dim: #eee;
+  --edge-hover: #bbb;
+  --fg: #111;
+  --fg-secondary: #333;
+  --fg-tertiary: #555;
+  --fg-muted: #666;
+  --fg-dimmed: #777;
+  --fg-faint: #888;
+  --fg-ghost: #999;
+  --fg-invisible: #aaa;
+  --btn-bg: #111;
+  --btn-hover: #333;
+  --btn-fg: #fff;
+  --toggle-off: #ccc;
+  --toggle-knob: #888;
+  --toggle-on-bg: #111;
+  --toggle-on-knob: #fff;
+  --link: #2563eb;
+  --code-accent: #d63384;
+  --cta-bg: #111;
+  --cta-fg: #fff;
+  --accent-voice: #17c3c3;
+  --accent-search: #17c3c3;
+  --accent-decide: #17c3c3;
+  --accent-search-fg: #04252b;
+  --scrollbar: #ccc;
+  --scrollbar-hover: #aaa;
+  --resize-bar: #ccc;
+  --resize-bar-hover: #aaa;
+  --resize-overlay: #0000000a;
+  --blockquote-border: #d4d4d4;
+  --blockquote-fg: #666;
+}
+
+/* 2. Original dark semantic palette — same 44 variable names. */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --surface: #111;
+  --surface-alt: #1a1a1a;
+  --surface-code: #0d0d0d;
+  --surface-hover: #222;
+  --surface-elevated: #161616;
+  --surface-citation: #1e1e1e;
+  --surface-tooltip: #1a1a1a;
+  --surface-modal: #111;
+  --edge: #333;
+  --edge-soft: #2a2a2a;
+  --edge-dim: #222;
+  --edge-hover: #444;
+  --fg: #ededed;
+  --fg-secondary: #ddd;
+  --fg-tertiary: #ccc;
+  --fg-muted: #999;
+  --fg-dimmed: #888;
+  --fg-faint: #777;
+  --fg-ghost: #666;
+  --fg-invisible: #555;
+  --btn-bg: #555;
+  --btn-hover: #666;
+  --btn-fg: #fff;
+  --toggle-off: #444;
+  --toggle-knob: #888;
+  --toggle-on-bg: #fff;
+  --toggle-on-knob: #111;
+  --link: #60a5fa;
+  --code-accent: #eb5757;
+  --cta-bg: #fff;
+  --cta-fg: #000;
+  --accent-voice: #17c3c3;
+  --accent-search: #17c3c3;
+  --accent-decide: #17c3c3;
+  --accent-search-fg: #04252b;
+  --scrollbar: #333;
+  --scrollbar-hover: #555;
+  --resize-bar: #333;
+  --resize-bar-hover: #555;
+  --resize-overlay: #ffffff0a;
+  --blockquote-border: #333;
+  --blockquote-fg: #999;
+}
+
+/* 3. Original non-color foundation variables from @layer theme.
+ * Names and literal values are preserved. The declaration layer is
+ * intentionally omitted so this file can be consumed on its own.
+ * --animate-* strings require their original named keyframes. */
+:root, :host {
+  --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --spacing: .25rem;
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-7xl: 80rem;
+  --text-xs: .75rem;
+  --text-xs--line-height: calc(1 / .75);
+  --text-sm: .875rem;
+  --text-sm--line-height: calc(1.25 / .875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --tracking-normal: 0em;
+  --tracking-wide: .025em;
+  --tracking-wider: .05em;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-relaxed: 1.625;
+  --radius-sm: .25rem;
+  --radius-md: .375rem;
+  --radius-lg: .5rem;
+  --radius-xl: .75rem;
+  --radius-2xl: 1rem;
+  --ease-out: cubic-bezier(0, 0, .2, 1);
+  --animate-spin: spin 1s linear infinite;
+  --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+  --blur-sm: 8px;
+  --blur-3xl: 64px;
+  --default-transition-duration: .15s;
+  --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  --default-font-family: "Mona Sans", "Archivo", "Vazirmatn";
+  --default-mono-font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* 4. Introduced convenience aliases — these names are NOT original tokens.
+ * Most values promote verified declarations into reusable custom properties.
+ * The pill radius is explicitly normalized; the spacing expressions are
+ * copied from utility rules. Consult JSON for each alias's provenance.
+ *
+ * SOURCE pill radius: 3.40282e38px
+ * MEASURED Chromium pill radius: 3.35544e+07px
+ * REUSABLE NORMALIZATION below: 9999px (same pill for observed sizes).
+ *
+ * Breakpoint values are documentary: use the literal numeric value in an
+ * @media condition. Native CSS var() does not work in @media conditions.
+ * Boundaries: 475px, 40rem, 48rem, 64rem, 80rem, 96rem.
+ * The rem boundaries equal 640/768/1024/1280/1536px at a 16px initial size.
+ */
+:root {
+  --inception-font-body: Mona Sans,Archivo,Vazirmatn,-apple-system,BlinkMacSystemFont,ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial;
+  --inception-text-body: 1rem;
+  --inception-leading-body: 1.5;
+  --inception-tracking-body: .01em;
+  --inception-content-max: 680px;
+  --inception-border-width: 1px;
+  --inception-radius-pill: 9999px;
+  --inception-scrollbar-size: 6px;
+  --inception-scrollbar-radius: 3px;
+  --inception-space-0: calc(var(--spacing) * 0);
+  --inception-space-0-5: calc(var(--spacing) * .5);
+  --inception-space-1: calc(var(--spacing) * 1);
+  --inception-space-1-5: calc(var(--spacing) * 1.5);
+  --inception-space-2: calc(var(--spacing) * 2);
+  --inception-space-2-5: calc(var(--spacing) * 2.5);
+  --inception-space-3: calc(var(--spacing) * 3);
+  --inception-space-3-5: calc(var(--spacing) * 3.5);
+  --inception-space-4: calc(var(--spacing) * 4);
+  --inception-space-5: calc(var(--spacing) * 5);
+  --inception-space-6: calc(var(--spacing) * 6);
+  --inception-space-8: calc(var(--spacing) * 8);
+  --inception-space-10: calc(var(--spacing) * 10);
+  --inception-space-12: calc(var(--spacing) * 12);
+  --inception-space-14: calc(var(--spacing) * 14);
+  --inception-space-16: calc(var(--spacing) * 16);
+  --inception-duration-100: .1s;
+  --inception-duration-150: .15s;
+  --inception-duration-200: .2s;
+  --inception-duration-300: .3s;
+  --inception-duration-500: .5s;
+  --inception-animation-pulse-subtle: 2s ease-in-out infinite pulse-subtle;
+  --inception-animation-decide-sweep: .7s cubic-bezier(.2,.8,.2,1) both decide-sweep;
+  --inception-animation-decide-ping: 1s cubic-bezier(0,0,.2,1) infinite decide-ping;
+  --inception-breakpoint-xs: 475px;
+  --inception-breakpoint-sm: 40rem;
+  --inception-breakpoint-md: 48rem;
+  --inception-breakpoint-lg: 64rem;
+  --inception-breakpoint-xl: 80rem;
+  --inception-breakpoint-2xl: 96rem;
+}
+
+/* 5. Optional font-face reference — commented out intentionally.
+ * The original /fonts/MonaSans.woff2 file is NOT bundled or fetched here.
+ * Enable only after supplying the font at the appropriate path.
+ * Original source reference:
+ * https://chat.inceptionlabs.ai/fonts/MonaSans.woff2
+ *
+ * @font-face {
+ *   font-family: Mona Sans;
+ *   src: url(/fonts/MonaSans.woff2)format("woff2");
+ *   font-weight: 200 900;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+/* Example typography/application mapping (optional, not active):
+ * body {
+ *   background: var(--background);
+ *   color: var(--foreground);
+ *   font-family: var(--inception-font-body);
+ *   font-size: var(--inception-text-body);
+ *   line-height: var(--inception-leading-body);
+ *   letter-spacing: var(--inception-tracking-body);
+ * }
+ * .app-shell { background: var(--surface); color: var(--fg); }
+ */

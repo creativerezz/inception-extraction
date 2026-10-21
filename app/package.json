@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "start": "bun server/index.ts",
     "lint": "oxlint",
+    "sync-assets": "cp ../PROMPTS.json src/data/prompts.json && cp ../design-tokens.css src/data/design-tokens.css",
     "preview": "vite preview"
   },
   "dependencies": {

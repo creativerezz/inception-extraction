@@ -1,0 +1,685 @@
+{
+  "schema_version": "1.0.0",
+  "source_url": "https://chat.inceptionlabs.ai/",
+  "source_title": "Inception Chat",
+  "generated_at_utc": "2026-10-19T22:03:21Z",
+  "extraction": {
+    "method": "Python standard-library HTMLParser over five saved rendered HTML documents; no script or application-state inspection.",
+    "prompt_selector": "button whose class list contains w-full, text-left, px-4, py-2.5, rounded-xl; first child div is title, second child div is description.",
+    "title_selector": "div.text-sm.font-medium",
+    "description_selector": "div.text-xs.line-clamp-1",
+    "text_preservation": "HTML entities decoded by parser. Text within each title and description is otherwise preserved, including spelling, case, punctuation, and lack of final punctuation. Capture IDs and original HTML SHA-256 hashes identify the source observations.",
+    "deduplication": "Exact ordered pair (title, description). Stable ID is inception-prompt- plus first 12 lowercase hex characters of SHA-256 over UTF-8(title + U+0000 + description).",
+    "catalog_order": "First appearance in the desktop baseline capture.",
+    "excluded": "Navigation, Try Suggested Prompt control, animated headline, model labels, cookie banner, legal text, and conversation-history notice.",
+    "visibility_limit": "Extracted DOM entries can exist within collapsed or clipped UI. This catalog does not assert that every entry was visible at once in each screenshot.",
+    "click_payload_verified": false
+  },
+  "summary": {
+    "capture_count": 5,
+    "initial_capture_count": 2,
+    "additional_fresh_capture_count": 3,
+    "total_prompt_observations": 55,
+    "unique_displayed_prompt_count": 11,
+    "prompts_with_nonempty_description": 3,
+    "unique_orders_observed": 5,
+    "every_capture_contains_same_prompt_set": true,
+    "new_prompts_in_three_additional_captures": 0,
+    "text_variants_observed": 0,
+    "conclusion": "All five captures contain the same 11 displayed prompts in five distinct orders. The three additional fresh captures added no new prompts.",
+    "scope_limit": "This establishes the observed collection for these captures, not a proof that no other prompt exists or that every session, route, or later release uses the same set.",
+    "ordering_interpretation": "Shuffling is consistent with the observed order changes; the shuffle algorithm is not verified by this HTML-only analysis.",
+    "editorial_category_counts": {
+      "Coding": 6,
+      "Creative writing": 4,
+      "Explanation and learning": 1
+    },
+    "editorial_subcategory_counts": {
+      "Games and simulations": 5,
+      "Constrained poetry": 2,
+      "News-based poetry": 1,
+      "Scientific explanation": 1,
+      "Acrostic instructions": 1,
+      "Interface design": 1
+    },
+    "categorization_provenance": "Categories and subcategories are analyst-created labels, not site-supplied taxonomy."
+  },
+  "prompts": [
+    {
+      "id": "inception-prompt-218f019ec14d",
+      "catalog_number": 1,
+      "title": "Implement 2048 in HTML5.",
+      "description": "",
+      "full_prompt": "Implement 2048 in HTML5.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Games and simulations",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 1
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 7
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 2
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 2
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-4f8bf53b8bf9",
+      "catalog_number": 2,
+      "title": "Write a Shakespearean sonnet about bananas without using the letter e.",
+      "description": "",
+      "full_prompt": "Write a Shakespearean sonnet about bananas without using the letter e.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Creative writing",
+      "editorial_subcategory": "Constrained poetry",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 2
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 4
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 10
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 7
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-e7941c9c7651",
+      "catalog_number": 3,
+      "title": "Write a poem about the 5 most recent headlines about Zendaya.",
+      "description": "",
+      "full_prompt": "Write a poem about the 5 most recent headlines about Zendaya.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Creative writing",
+      "editorial_subcategory": "News-based poetry",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 3
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 1
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 6
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 5
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-1621ca105508",
+      "catalog_number": 4,
+      "title": "Please explain special relativity to me like I'm five years old.",
+      "description": "",
+      "full_prompt": "Please explain special relativity to me like I'm five years old.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Explanation and learning",
+      "editorial_subcategory": "Scientific explanation",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 4
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 9
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 9
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 10
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-54b8e2b4de5b",
+      "catalog_number": 5,
+      "title": "Implement a simulator of the Civic Center BART station",
+      "description": "complete with graphics of trains coming and going, a schedule, and passengers.",
+      "full_prompt": "Implement a simulator of the Civic Center BART station complete with graphics of trains coming and going, a schedule, and passengers.",
+      "full_prompt_provenance": {
+        "status": "reconstructed_from_display_title_and_description",
+        "join_rule": "title + single U+0020 space + description",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Games and simulations",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 5
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 8
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 8
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 4
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 11
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-529ffc4b7e97",
+      "catalog_number": 6,
+      "title": "Persuade me to eat your favorite fruit using a haiku",
+      "description": "",
+      "full_prompt": "Persuade me to eat your favorite fruit using a haiku",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Creative writing",
+      "editorial_subcategory": "Constrained poetry",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 6
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 2
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 1
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 3
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 3
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-e4e5bd74de04",
+      "catalog_number": 7,
+      "title": "Implement Conway's Game of Life in HTML5.",
+      "description": "",
+      "full_prompt": "Implement Conway's Game of Life in HTML5.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Games and simulations",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 7
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 3
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 7
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 9
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-10d5c7051257",
+      "catalog_number": 8,
+      "title": "Create a 2d zombie shooter game with powerups and weapons",
+      "description": "",
+      "full_prompt": "Create a 2d zombie shooter game with powerups and weapons",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Games and simulations",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 8
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 5
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 11
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 11
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 4
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-05b53b7a1e7b",
+      "catalog_number": 9,
+      "title": "Write a set of instructions for assembling furniture",
+      "description": "but hide a second message readable by taking the first character of every sentence.",
+      "full_prompt": "Write a set of instructions for assembling furniture but hide a second message readable by taking the first character of every sentence.",
+      "full_prompt_provenance": {
+        "status": "reconstructed_from_display_title_and_description",
+        "join_rule": "title + single U+0020 space + description",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Creative writing",
+      "editorial_subcategory": "Acrostic instructions",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 9
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 10
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 5
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 8
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-52f38485b668",
+      "catalog_number": 10,
+      "title": "Implement flappy bird in html5 and javascript.",
+      "description": "",
+      "full_prompt": "Implement flappy bird in html5 and javascript.",
+      "full_prompt_provenance": {
+        "status": "display_title_only",
+        "join_rule": "title unchanged; description empty",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Games and simulations",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 10
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 11
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 3
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 6
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 9
+        }
+      ]
+    },
+    {
+      "id": "inception-prompt-b78bbec908f2",
+      "catalog_number": 11,
+      "title": "Make a futuristic-looking product listing page for a toaster",
+      "description": "complete with pricing, size options, color options, reviews, and product specs.",
+      "full_prompt": "Make a futuristic-looking product listing page for a toaster complete with pricing, size options, color options, reviews, and product specs.",
+      "full_prompt_provenance": {
+        "status": "reconstructed_from_display_title_and_description",
+        "join_rule": "title + single U+0020 space + description",
+        "click_payload_verified": false,
+        "note": "This field represents displayed prompt wording. The text inserted or sent after clicking was not verified in these five captures."
+      },
+      "editorial_category": "Coding",
+      "editorial_subcategory": "Interface design",
+      "observations": [
+        {
+          "capture_id": "firecrawl-desktop",
+          "position": 11
+        },
+        {
+          "capture_id": "firecrawl-mobile",
+          "position": 6
+        },
+        {
+          "capture_id": "prompt-refresh-1",
+          "position": 4
+        },
+        {
+          "capture_id": "prompt-refresh-2",
+          "position": 1
+        },
+        {
+          "capture_id": "prompt-refresh-3",
+          "position": 5
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "capture_id": "firecrawl-desktop",
+      "analysis_sequence": 1,
+      "source_url": "https://chat.inceptionlabs.ai/",
+      "requested_url": "https://chat.inceptionlabs.ai",
+      "html_sha256": "34c8816494135f0367175cbaae4147dcb4594ae0bb6a2b6bfc18fc804747aa6b",
+      "html_file_saved_at_utc": "2026-10-19T21:58:31.698332Z",
+      "metadata_file_saved_at_utc": "2026-10-19T21:58:33.842236Z",
+      "file_saved_at_provenance": "Local filesystem modification time observed while producing this catalog; distinct from capture time.",
+      "scrape_id": "01a1562b-cb57-7057-9f8d-55d0308bccbb",
+      "http_status": 200,
+      "max_age": 0,
+      "requested_capture": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "mobile": false,
+        "fullPage": true,
+        "maxAge": 0,
+        "waitFor": 2000
+      },
+      "actual_rendered_viewport_verified": false,
+      "prompt_count": 11,
+      "unique_prompt_count": 11,
+      "prompt_order": [
+        "inception-prompt-218f019ec14d",
+        "inception-prompt-4f8bf53b8bf9",
+        "inception-prompt-e7941c9c7651",
+        "inception-prompt-1621ca105508",
+        "inception-prompt-54b8e2b4de5b",
+        "inception-prompt-529ffc4b7e97",
+        "inception-prompt-e4e5bd74de04",
+        "inception-prompt-10d5c7051257",
+        "inception-prompt-05b53b7a1e7b",
+        "inception-prompt-52f38485b668",
+        "inception-prompt-b78bbec908f2"
+      ],
+      "matches_baseline_membership": true,
+      "matches_baseline_order": true,
+      "comparison_to_previous_capture": null,
+      "actual_capture_time_utc": null,
+      "actual_capture_time_provenance": "Firecrawl did not return an actual rendering or capture timestamp; intentionally null.",
+      "retrieval_recorded_at_utc": null,
+      "retrieval_recorded_at_provenance": "No locally generated retrieval-record timestamp was supplied for this capture; intentionally null."
+    },
+    {
+      "capture_id": "firecrawl-mobile",
+      "analysis_sequence": 2,
+      "source_url": "https://chat.inceptionlabs.ai/",
+      "requested_url": "https://chat.inceptionlabs.ai",
+      "html_sha256": "b13eb67beb50cf01b3565a349bb7d1f133f87deb38fd4ba6ed58a0ad8bc046fe",
+      "html_file_saved_at_utc": "2026-10-19T21:58:34.978184Z",
+      "metadata_file_saved_at_utc": "2026-10-19T21:58:37.214083Z",
+      "file_saved_at_provenance": "Local filesystem modification time observed while producing this catalog; distinct from capture time.",
+      "scrape_id": "01a1562b-e9b4-75bd-a5e2-ea45675a81a1",
+      "http_status": 200,
+      "max_age": 0,
+      "requested_capture": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "mobile": true,
+        "fullPage": true,
+        "maxAge": 0,
+        "waitFor": 2000
+      },
+      "actual_rendered_viewport_verified": false,
+      "prompt_count": 11,
+      "unique_prompt_count": 11,
+      "prompt_order": [
+        "inception-prompt-e7941c9c7651",
+        "inception-prompt-529ffc4b7e97",
+        "inception-prompt-e4e5bd74de04",
+        "inception-prompt-4f8bf53b8bf9",
+        "inception-prompt-10d5c7051257",
+        "inception-prompt-b78bbec908f2",
+        "inception-prompt-218f019ec14d",
+        "inception-prompt-54b8e2b4de5b",
+        "inception-prompt-1621ca105508",
+        "inception-prompt-05b53b7a1e7b",
+        "inception-prompt-52f38485b668"
+      ],
+      "matches_baseline_membership": true,
+      "matches_baseline_order": false,
+      "comparison_to_previous_capture": {
+        "previous_capture_id": "firecrawl-desktop",
+        "new_prompt_ids": [],
+        "missing_prompt_ids": [],
+        "order_changed": true,
+        "positions_changed": 11
+      },
+      "actual_capture_time_utc": null,
+      "actual_capture_time_provenance": "Firecrawl did not return an actual rendering or capture timestamp; intentionally null.",
+      "retrieval_recorded_at_utc": null,
+      "retrieval_recorded_at_provenance": "No locally generated retrieval-record timestamp was supplied for this capture; intentionally null."
+    },
+    {
+      "capture_id": "prompt-refresh-1",
+      "analysis_sequence": 3,
+      "source_url": "https://chat.inceptionlabs.ai/",
+      "requested_url": "https://chat.inceptionlabs.ai",
+      "html_sha256": "beda3c3cba092385368e3c4eddf8f5b5d8923983c2668dc2e3d938c7f17b35ee",
+      "html_file_saved_at_utc": "2026-10-19T21:59:26.199875Z",
+      "metadata_file_saved_at_utc": "2026-10-19T22:05:28.797556Z",
+      "file_saved_at_provenance": "Local filesystem modification time observed while producing this catalog; distinct from capture time.",
+      "scrape_id": "01a1562c-ba87-7095-80c6-5d7c36505848",
+      "http_status": 200,
+      "max_age": 0,
+      "requested_capture": null,
+      "actual_rendered_viewport_verified": false,
+      "prompt_count": 11,
+      "unique_prompt_count": 11,
+      "prompt_order": [
+        "inception-prompt-529ffc4b7e97",
+        "inception-prompt-218f019ec14d",
+        "inception-prompt-52f38485b668",
+        "inception-prompt-b78bbec908f2",
+        "inception-prompt-05b53b7a1e7b",
+        "inception-prompt-e7941c9c7651",
+        "inception-prompt-e4e5bd74de04",
+        "inception-prompt-54b8e2b4de5b",
+        "inception-prompt-1621ca105508",
+        "inception-prompt-4f8bf53b8bf9",
+        "inception-prompt-10d5c7051257"
+      ],
+      "matches_baseline_membership": true,
+      "matches_baseline_order": false,
+      "comparison_to_previous_capture": {
+        "previous_capture_id": "firecrawl-mobile",
+        "new_prompt_ids": [],
+        "missing_prompt_ids": [],
+        "order_changed": true,
+        "positions_changed": 9
+      },
+      "actual_capture_time_utc": null,
+      "actual_capture_time_provenance": "Firecrawl did not return an actual rendering or capture timestamp; intentionally null.",
+      "retrieval_recorded_at_utc": "2026-10-19T21:59:23.911Z",
+      "retrieval_recorded_at_provenance": "Locally generated when the retrieved result was saved. This is not a capture timestamp returned by Firecrawl."
+    },
+    {
+      "capture_id": "prompt-refresh-2",
+      "analysis_sequence": 4,
+      "source_url": "https://chat.inceptionlabs.ai/",
+      "requested_url": "https://chat.inceptionlabs.ai",
+      "html_sha256": "168377b7e85dd5cf5d6117040e2c2a2bf36112f96097f42edd099388f401865e",
+      "html_file_saved_at_utc": "2026-10-19T21:59:41.411190Z",
+      "metadata_file_saved_at_utc": "2026-10-19T22:05:28.799840Z",
+      "file_saved_at_provenance": "Local filesystem modification time observed while producing this catalog; distinct from capture time.",
+      "scrape_id": "01a1562d-557f-709b-a5bf-b5e41caea8f6",
+      "http_status": 200,
+      "max_age": 0,
+      "requested_capture": null,
+      "actual_rendered_viewport_verified": false,
+      "prompt_count": 11,
+      "unique_prompt_count": 11,
+      "prompt_order": [
+        "inception-prompt-b78bbec908f2",
+        "inception-prompt-218f019ec14d",
+        "inception-prompt-529ffc4b7e97",
+        "inception-prompt-54b8e2b4de5b",
+        "inception-prompt-e7941c9c7651",
+        "inception-prompt-52f38485b668",
+        "inception-prompt-4f8bf53b8bf9",
+        "inception-prompt-05b53b7a1e7b",
+        "inception-prompt-e4e5bd74de04",
+        "inception-prompt-1621ca105508",
+        "inception-prompt-10d5c7051257"
+      ],
+      "matches_baseline_membership": true,
+      "matches_baseline_order": false,
+      "comparison_to_previous_capture": {
+        "previous_capture_id": "prompt-refresh-1",
+        "new_prompt_ids": [],
+        "missing_prompt_ids": [],
+        "order_changed": true,
+        "positions_changed": 9
+      },
+      "actual_capture_time_utc": null,
+      "actual_capture_time_provenance": "Firecrawl did not return an actual rendering or capture timestamp; intentionally null.",
+      "retrieval_recorded_at_utc": "2026-10-19T21:59:39.233Z",
+      "retrieval_recorded_at_provenance": "Locally generated when the retrieved result was saved. This is not a capture timestamp returned by Firecrawl."
+    },
+    {
+      "capture_id": "prompt-refresh-3",
+      "analysis_sequence": 5,
+      "source_url": "https://chat.inceptionlabs.ai/",
+      "requested_url": "https://chat.inceptionlabs.ai",
+      "html_sha256": "d91aafcce0316c92f1d12dfcbbb230dcd87e2d26bb7e9129f523117ee327db78",
+      "html_file_saved_at_utc": "2026-10-19T22:00:06.786048Z",
+      "metadata_file_saved_at_utc": "2026-10-19T22:05:28.800066Z",
+      "file_saved_at_provenance": "Local filesystem modification time observed while producing this catalog; distinct from capture time.",
+      "scrape_id": "01a1562d-c285-70ca-8b75-f6e9ab7b38af",
+      "http_status": 200,
+      "max_age": 0,
+      "requested_capture": null,
+      "actual_rendered_viewport_verified": false,
+      "prompt_count": 11,
+      "unique_prompt_count": 11,
+      "prompt_order": [
+        "inception-prompt-e7941c9c7651",
+        "inception-prompt-e4e5bd74de04",
+        "inception-prompt-529ffc4b7e97",
+        "inception-prompt-10d5c7051257",
+        "inception-prompt-b78bbec908f2",
+        "inception-prompt-1621ca105508",
+        "inception-prompt-4f8bf53b8bf9",
+        "inception-prompt-05b53b7a1e7b",
+        "inception-prompt-52f38485b668",
+        "inception-prompt-218f019ec14d",
+        "inception-prompt-54b8e2b4de5b"
+      ],
+      "matches_baseline_membership": true,
+      "matches_baseline_order": false,
+      "comparison_to_previous_capture": {
+        "previous_capture_id": "prompt-refresh-2",
+        "new_prompt_ids": [],
+        "missing_prompt_ids": [],
+        "order_changed": true,
+        "positions_changed": 8
+      },
+      "actual_capture_time_utc": null,
+      "actual_capture_time_provenance": "Firecrawl did not return an actual rendering or capture timestamp; intentionally null.",
+      "retrieval_recorded_at_utc": "2026-10-19T22:00:04.510Z",
+      "retrieval_recorded_at_provenance": "Locally generated when the retrieved result was saved. This is not a capture timestamp returned by Firecrawl."
+    }
+  ]
+}

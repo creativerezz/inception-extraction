@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/mona-sans';
-/* Single source of truth: the extracted token file at the repo root. */
-@import '../../design-tokens.css';
+/* Vendored copy of the extracted tokens (synced from repo-root design-tokens.css via `bun run sync-assets`). */
+@import './data/design-tokens.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 

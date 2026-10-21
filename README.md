@@ -44,7 +44,7 @@ bun run start   # production: API + built app on :3003
 bun run lint    # oxlint
 ```
 
-See [`app/README.md`](app/README.md) for the provider setup (local Ollama + OpenRouter free models), the Thinking menu, and where each piece lives. Product analytics run through `@vercel/analytics` (`chat_sent`, `prompt_picked`, `diffusion_toggled`, `chat_stopped`).
+See [`app/README.md`](app/README.md) for the provider setup (local Ollama + OpenRouter free models), the Thinking menu, and where each piece lives. The app vendors `PROMPTS.json` and `design-tokens.css` into `app/src/data/` so it builds standalone on Vercel; run `bun run sync-assets` from `app/` to refresh them from the canonical root copies. Product analytics run through `@vercel/analytics` (`chat_sent`, `prompt_picked`, `diffusion_toggled`, `chat_stopped`).
 
 ## Deploy
 
