@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/mona-sans';
+/* Single source of truth: the extracted token file at the repo root. */
+@import '../../design-tokens.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Expose the semantic tokens as Tailwind utilities (bg-surface, text-fg-muted, border-edge, ...). */
+@theme inline {
+  --font-sans: 'Mona Sans Variable', 'Mona Sans', Archivo, Vazirmatn, -apple-system, BlinkMacSystemFont,
+    ui-sans-serif, system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial;
+
+  --breakpoint-xs: 475px;
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-code: var(--surface-code);
+  --color-surface-modal: var(--surface-modal);
+  --color-surface-tooltip: var(--surface-tooltip);
+  --color-edge: var(--edge);
+  --color-edge-soft: var(--edge-soft);
+  --color-edge-dim: var(--edge-dim);
+  --color-edge-hover: var(--edge-hover);
+  --color-fg: var(--fg);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-fg-tertiary: var(--fg-tertiary);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-dimmed: var(--fg-dimmed);
+  --color-fg-faint: var(--fg-faint);
+  --color-fg-ghost: var(--fg-ghost);
+  --color-fg-invisible: var(--fg-invisible);
+  --color-btn: var(--btn-bg);
+  --color-btn-hover: var(--btn-hover);
+  --color-btn-fg: var(--btn-fg);
+  --color-cta: var(--cta-bg);
+  --color-cta-fg: var(--cta-fg);
+  --color-toggle-off: var(--toggle-off);
+  --color-toggle-knob: var(--toggle-knob);
+  --color-toggle-on: var(--toggle-on-bg);
+  --color-toggle-on-knob: var(--toggle-on-knob);
+  --color-accent: var(--accent-voice);
+  --color-link: var(--link);
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--background);
+    color: var(--fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Spec improvement: visible keyboard focus everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--edge-hover);
+    outline-offset: 2px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar) transparent;
+  }
+}
+
+/* Suggested-prompt accordion: grid-row + opacity, 300ms ease-out. */
+.prompt-expander {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 300ms var(--ease-out),
+    opacity 300ms var(--ease-out);
+}
+.prompt-expander[data-open='true'] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
